@@ -43,13 +43,16 @@ def authorize_creds(creds):
 
     # Creates an authorization flow from a clientsecrets file.
     # Will raise InvalidClientSecretsError for unknown types of Flows.
-    flow = client.flow_from_clientsecrets(
-        CLIENT_SECRETS_PATH, scope = SCOPES,
-        message = tools.message_if_missing(CLIENT_SECRETS_PATH))
-
+    #flow = client.flow_from_clientsecrets(
+    #    CLIENT_SECRETS_PATH, scope = SCOPES,
+    #    message = tools.message_if_missing(CLIENT_SECRETS_PATH))
+    flow = client.OAuth2WebServerFlow(client_id='1044154810418-d7t27aqhu4thts78a2pvehu5o3248upa.apps.googleusercontent.com',
+                           client_secret='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',
+                           scope=SCOPES)
     # Prepare credentials and authorize HTTP
     # If they exist, get them from the storage object
     # credentials will get written back to the 'authorizedcreds.dat' file.
+    
     storage = file.Storage('authorizedcreds.dat')
     credentials = storage.get()
 

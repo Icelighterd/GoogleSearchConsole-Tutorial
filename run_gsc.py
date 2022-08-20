@@ -23,10 +23,10 @@ from gsc_with_filters import gsc_with_filters
 from gsc_to_csv_by_month import gsc_to_csv
 from oauth import authorize_creds, execute_request
 
-site = 'https://www.jcchouinard.com'# Property to extract              
+site = 'https://www.modernman.com/'# Property to extract              
 creds = 'client_secrets.json'       # Credential file from GSC
 output = 'gsc_data.csv'
-start_date = '2020-07-01'      
+start_date = '2022-07-01'      
 
 webmasters_service = authorize_creds(creds) 
 

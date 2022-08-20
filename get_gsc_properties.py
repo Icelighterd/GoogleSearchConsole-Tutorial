@@ -30,3 +30,5 @@ verified_sites_urls = [s['siteUrl'] for s in site_list['siteEntry']
                        if s['permissionLevel'] != 'siteUnverifiedUser'
                           and s['siteUrl'][:4] == 'http']
 
+print(verified_sites_urls)
+print(site_list)
